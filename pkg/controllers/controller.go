@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Hyphenhypen/go-bookstore-backend/pkg/models"
-	"github.com/Hyphenhypen/go-bookstore-backend/pkg/utils"
+	"github.com/Aditya-PS-05/go-bookstore-backend/pkg/models"
+	"github.com/Aditya-PS-05/go-bookstore-backend/pkg/utils"
 	"github.com/gorilla/mux"
 )
 

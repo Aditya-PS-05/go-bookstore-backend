@@ -3,7 +3,7 @@ package routes
 import (
 	"fmt"
 
-	"github.com/Hyphenhypen/go-bookstore-backend/pkg/controllers"
+	"github.com/Aditya-PS-05/go-bookstore-backend/pkg/controllers"
 	"github.com/gorilla/mux"
 )
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Hyphenhypen/go-bookstore-backend/pkg/routes"
+	"github.com/Aditya-PS-05/go-bookstore-backend/pkg/routes"
 	"github.com/gorilla/mux"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
