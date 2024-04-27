@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/hyphenhypen/go-bookstore-backend/pkg/config"
+	"github.com/Hyphenhypen/go-bookstore-backend/pkg/config"
 	"github.com/jinzhu/gorm"
 )
 

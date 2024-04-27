@@ -1,4 +1,4 @@
-module github.com/hyphenhypen/go-bookstore-backend
+module github.com/Hyphenhypen/go-bookstore-backend
 
 go 1.22.1
 

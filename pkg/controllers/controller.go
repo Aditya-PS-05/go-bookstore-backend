@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/Hyphenhypen/go-bookstore-backend/pkg/models"
+	"github.com/Hyphenhypen/go-bookstore-backend/pkg/utils"
 	"github.com/gorilla/mux"
-	"github.com/hyphenhypen/go-bookstore-backend/pkg/models"
-	"github.com/hyphenhypen/go-bookstore-backend/pkg/utils"
 )
 
 var NewBook models.Book
