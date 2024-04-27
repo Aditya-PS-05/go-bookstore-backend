@@ -15,8 +15,12 @@ var NewBook models.Book
 
 func GetBook(w http.ResponseWriter, r *http.Request) {
 	newBooks := models.GetAllBooks()
-	res, _ := json.Marshal(newBooks)
-	w.Header().Set("Content-Type", "pkglication/json")
+	res, err := json.Marshal(newBooks)
+	if err != nil {
+		http.Error(w, "Error marshaling JSON", http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
@@ -30,17 +34,19 @@ func GetBookById(w http.ResponseWriter, r *http.Request) {
 	}
 	bookDetails, _ := models.GetBookById(ID)
 	res, _ := json.Marshal(bookDetails)
-	w.Header().Set("Content-Type", "pkglication/json")
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
 
 func CreateBook(w http.ResponseWriter, r *http.Request) {
 	CreateBook := &models.Book{}
+	fmt.Println("res is createBook")
 	utils.ParseBody(r, CreateBook)
 	b := CreateBook.CreateBook()
 	res, _ := json.Marshal(b)
-	w.Header().Set("Content-Type", "pkglication/json")
+	fmt.Println("res is ", res)
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
@@ -54,7 +60,7 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 	}
 	bookDetails := models.DeleteBook(ID)
 	res, _ := json.Marshal(bookDetails)
-	w.Header().Set("Content-Type", "pkglication/json")
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
