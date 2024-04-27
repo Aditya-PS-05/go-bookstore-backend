@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/Hyphenhypen/go-bookstore-backend/pkg/routes"
 	"github.com/gorilla/mux"
-	"github.com/hyphenhypen/go-bookstore-backend/pkg/routes"
 )
 
 func main() {
